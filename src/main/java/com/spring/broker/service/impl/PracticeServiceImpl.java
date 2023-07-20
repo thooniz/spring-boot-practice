@@ -20,6 +20,9 @@ public class PracticeServiceImpl implements PracticeService {
         log.info("================== 3. test Service Start : {} ==================", "OK");
 
         Map<String, Object> returnMap = new HashMap<>();
+
+        returnMap.put("id", "test_id");
+        returnMap.put("name", "test_name");
         returnMap.put("returnMsg", "success");
 
         log.info("================== 4. test Service End : {} ==================", returnMap);
