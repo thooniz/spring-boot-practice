@@ -9,14 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringBootPracticeApplication {
 
     public static void main(String[] args) {
-
         log.info("================== 1. main Start : {} ==================", "OK");
-
-        /*
-        @Value("${server.port}")
-        String value;
-        log.debug("================== 2. Slf4j Test : {}", );
-        */
 
         SpringApplication.run(SpringBootPracticeApplication.class, args);
     }
