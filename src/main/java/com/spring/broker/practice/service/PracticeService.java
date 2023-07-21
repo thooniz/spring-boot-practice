@@ -1,4 +1,4 @@
-package com.spring.broker.service;
+package com.spring.broker.practice.service;
 
 import org.springframework.http.ResponseEntity;
 
@@ -10,5 +10,5 @@ public interface PracticeService {
      *
      * @return ResponseEntity
      */
-    Map<String, Object> getTest();
+    Map<String, Object> getPracticeData(Map<?, ?> requestBody);
 }

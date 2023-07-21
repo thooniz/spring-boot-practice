@@ -1,0 +1,12 @@
+thoondevdb_high = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=g6c42b57079dfc0_thoondevdb_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+thoondevdb_low = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=g6c42b57079dfc0_thoondevdb_low.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+thoondevdb_medium = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=g6c42b57079dfc0_thoondevdb_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+thoondevdb_tp = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=g6c42b57079dfc0_thoondevdb_tp.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+thoondevdb_tpurgent = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=g6c42b57079dfc0_thoondevdb_tpurgent.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+
+
