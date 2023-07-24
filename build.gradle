@@ -24,15 +24,45 @@ repositories {
 dependencies {
 	//implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'com.oracle.database.jdbc:ojdbc11'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// Oracle Cloud Driver
+	runtimeOnly 'com.oracle.database.jdbc:ojdbc11'
+	implementation 'com.oracle.database.security:osdt_core:21.9.0.0'
+	implementation 'com.oracle.database.security:oraclepki:21.9.0.0'
+	implementation 'com.oracle.database.security:osdt_cert:21.9.0.0'
+
 	implementation 'javax.persistence:javax.persistence-api:2.2'
-	compileOnly 'org.projectlombok:lombok'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	implementation 'javax.annotation:javax.annotation-api:1.3.2'
+
+	//implementation 'com.querydsl:querydsl-jpa:5.0.0'
+	//implementation 'com.querydsl:querydsl-apt:5.0.0'
+
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+	// Lombok
+	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	// QueryDSL
+	compileOnly("com.querydsl:querydsl-core")
+	compileOnly("com.querydsl:querydsl-jpa")
+	annotationProcessor("com.querydsl:querydsl-apt:${dependencyManagement.importedProperties['querydsl.version']}:jpa")
+	annotationProcessor("javax.persistence:javax.persistence-api:2.2")
+	annotationProcessor("javax.annotation:javax.annotation-api:1.3.2")
+
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	///testImplementation 'org.springframework.security:spring-security-test'
+//	testImplementation 'org.springframework.security:spring-security-test'
+}
+
+// QueryDSL
+sourceSets {
+	main {
+		java {
+			srcDirs = ["$projectDir/src/main/java", "$projectDir/build/generated"]
+		}
+	}
 }
 
 tasks.named('test') {

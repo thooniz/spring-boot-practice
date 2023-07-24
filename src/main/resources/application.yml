@@ -1,38 +1,27 @@
 ## Server properties
 server:
-  port: 8989
+  port: 4002
 
 ## Spring properties
 spring:
-  application:
-    name: practice
-
-  profiles:
-    active: local
+  config:
+    activate:
+      on-profile: local
 
   datasource:
     driver-class-name: oracle.jdbc.OracleDriver
-    url: jdbc:oracle:thin:@thoondevdb_medium?TNS_ADMIN=./src/main/resources/Wallet/
+    url: jdbc:oracle:thin:@thoondevdb_medium?TNS_ADMIN=C:/Workspaces/tranings/spring-boot-practice/src/main/resources/Wallet
     username: admin
     password: Thnadm2023$$%
-    hikari:
-      auto-commit: false
-      connection-test-query: SELECT 1 FROM DUAL
-      minimum-idle: 10
-      maximum-pool-size: 50
-      transaction-isolation: TRANSACTION_READ_UNCOMMITTED
-      pool-name: pool-practice
 
   jpa:
     database-platform: org.hibernate.dialect.Oracle19cDialect
+    hibernate:
+      ddl-auto: update
     properties:
       hibernate:
+        show-sql: true
         format_sql: true
-        hbm2ddl.auto: update
-        implicit_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
-        physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
-    open-in-view: false
-    show-sql: true
 
 #    driver-class-name: org.mariadb.jdbc.Driver
 #    # 개발 서버용 DB

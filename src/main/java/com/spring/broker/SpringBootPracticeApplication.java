@@ -10,8 +10,7 @@ public class SpringBootPracticeApplication {
 
     public static void main(String[] args) {
         log.info("================== 1. main Start : {} ==================", "OK");
-
         SpringApplication.run(SpringBootPracticeApplication.class, args);
-    }
 
+    }
 }
